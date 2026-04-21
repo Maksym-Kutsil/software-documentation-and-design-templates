@@ -1,0 +1,20 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "Lab 2 - Three-layer architecture with ORM and CSV import",
+  "scripts": {
+    "build": "tsc",
+    "generate-csv": "ts-node src/csv-generator/generate.ts",
+    "start": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.0"
+  }
+}
