@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+<section class="hero">
+    <h1>Courses catalog</h1>
+    <p class="muted">
+        MVC-додаток для візуалізації курсів онлайн-платформи. Дані зберігаються у SQLite,
+        шар бізнес-логіки відповідає за читання та редагування, представлення — EJS-шаблони.
+    </p>
+    <div class="cta-row">
+        <a href="/courses" class="btn btn-primary">Переглянути курси</a>
+        <a href="/courses/create" class="btn btn-outline">Додати новий</a>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>Model</h3>
+        <p>Sequelize ORM + SQLite. Сутності Course, Specialization, Instructor.</p>
+    </div>
+    <div class="card">
+        <h3>View</h3>
+        <p>EJS-шаблони: список, деталі, форми створення/редагування/видалення.</p>
+    </div>
+    <div class="card">
+        <h3>Controller</h3>
+        <p>Express-контролери викликають BLL-сервіси, що працюють через інтерфейси DAL.</p>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
