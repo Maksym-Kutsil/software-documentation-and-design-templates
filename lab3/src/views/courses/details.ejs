@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+<div class="page-header">
+    <div>
+        <a href="/courses" class="muted">← Back to list</a>
+        <h1><%= course.name %></h1>
+    </div>
+    <div class="actions">
+        <a href="/courses/<%= course.id %>/edit" class="btn btn-outline">Edit</a>
+        <a href="/courses/<%= course.id %>/delete" class="btn btn-danger">Delete</a>
+    </div>
+</div>
+
+<div class="detail-grid">
+    <div class="detail-row">
+        <span class="label">ID</span>
+        <span><%= course.id %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Specialization</span>
+        <span><%= course.specializationName || '—' %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Instructor</span>
+        <span><%= course.instructorName || '—' %></span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Duration</span>
+        <span><%= course.durationWeeks %> weeks</span>
+    </div>
+    <div class="detail-row detail-row-full">
+        <span class="label">Description</span>
+        <p><%= course.description %></p>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

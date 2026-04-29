@@ -1,0 +1,19 @@
+{
+  "name": "lab4",
+  "version": "1.0.0",
+  "description": "Lab 4 - Strategy pattern for exporting Chicago crimes dataset",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/main.ts",
+    "dev": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "kafkajs": "^2.2.4",
+    "redis": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.0"
+  }
+}

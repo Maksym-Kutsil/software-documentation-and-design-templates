@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+
+<div class="page-header">
+    <h1>Courses</h1>
+    <a href="/courses/create" class="btn btn-primary">+ New course</a>
+</div>
+
+<% if (courses.length === 0) { %>
+    <div class="empty">
+        <p>Ще немає жодного курсу.</p>
+        <a href="/courses/create" class="btn btn-primary">Додати перший</a>
+    </div>
+<% } else { %>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Instructor</th>
+                <th>Duration</th>
+                <th class="col-actions">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% courses.forEach(function(course) { %>
+                <tr>
+                    <td><%= course.id %></td>
+                    <td><a href="/courses/<%= course.id %>"><%= course.name %></a></td>
+                    <td><%= course.specializationName || '—' %></td>
+                    <td><%= course.instructorName || '—' %></td>
+                    <td><%= course.durationWeeks %> weeks</td>
+                    <td class="col-actions">
+                        <a href="/courses/<%= course.id %>" class="btn btn-sm">View</a>
+                        <a href="/courses/<%= course.id %>/edit" class="btn btn-sm btn-outline">Edit</a>
+                        <a href="/courses/<%= course.id %>/delete" class="btn btn-sm btn-danger">Delete</a>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+<% } %>
+
+<%- include('../partials/footer') %>
